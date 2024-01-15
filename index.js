@@ -8,7 +8,7 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(express.static("views"))
-app.use(express.static("public"))
+app.use('/dynamic-images', express.static('assets'));
 
 app.set("view engine", "ejs")
 app.set('views', path.join(__dirname, 'views'));
