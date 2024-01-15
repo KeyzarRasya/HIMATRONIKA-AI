@@ -44,7 +44,6 @@ app.post("/search", (req, res) => {
             obj.nama = nama;
             obj.jabaran = "",
             obj.keterangan ="",
-            obj.rejected = true
             result = obj
         }
         switch (result.keterangan) {
@@ -95,6 +94,11 @@ app.post("/search", (req, res) => {
     }
     if(result.jabatan === ""){
         result.jabatan = "Staff"
+    }
+    if(rejected.nama.toLowerCase().includes(result.nama.toLowerCase())){
+        result.rejected = true;
+    }else{
+        result =""
     }
 
     console.log(result)
