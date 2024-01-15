@@ -7,7 +7,7 @@ const bl =[
       {
         nama: 'Hauzan Tsaaqif Mushaddaq',
         jabatan: 'Wakil Ketua Badan Legislatif',
-        keterangan: 'Sekretaris BL'
+        keterangan: ''
       },
       {
         nama: 'Raden Dimas Prastyadi Bratasurya',

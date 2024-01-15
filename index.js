@@ -36,8 +36,9 @@ const namas = [
 app.post("/search", (req, res) => {
     const {nama} = req.body
     const resultBL = bl.find((staff) => staff.nama.toLowerCase().includes(nama.toLowerCase()))
+    const resultBE = be.find((staff) => staff.nama.toLowerCase().includes(nama.toLowerCase()));
     if(resultBL === undefined){
-        const resultBE = be.find((staff) => staff.nama.toLowerCase().includes(nama.toLowerCase()));
+        
         result = resultBE;
         if(resultBE === undefined){
             const obj = {}
@@ -97,8 +98,8 @@ app.post("/search", (req, res) => {
     }
     if(rejected.nama.toLowerCase().includes(result.nama.toLowerCase())){
         result.rejected = true;
-    }else{
-        result =""
+    }else if(resultBL === undefined && resultBE === undefined){
+        result = "";
     }
 
     console.log(result)
