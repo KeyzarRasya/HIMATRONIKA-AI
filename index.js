@@ -13,6 +13,15 @@ app.set("view engine", "ejs")
 
 let result = ""
 
+const rejected = {
+    nama:"Abdul Rafi",
+    jabatan:"",
+    keterangan:"STURI",
+    wa:"",
+    kadept:"",
+    rejected:true
+}
+
 app.get("/", (req, res) => {
     res.render("search", {result})
 })
@@ -28,6 +37,14 @@ app.post("/search", (req, res) => {
     if(resultBL === undefined){
         const resultBE = be.find((staff) => staff.nama.toLowerCase().includes(nama.toLowerCase()));
         result = resultBE;
+        if(resultBE === undefined){
+            const obj = {}
+            obj.nama = nama;
+            obj.jabaran = "",
+            obj.keterangan ="",
+            obj.rejected = true
+            result = obj
+        }
         switch (result.keterangan) {
             case "Sekretaris":
                 result.wa = "https://wa.me/6285392064099";
@@ -69,7 +86,7 @@ app.post("/search", (req, res) => {
                 // Handle default case if necessary
         }
         
-    }else{
+    }else if(resultBL !== undefined){
         result = resultBL
         result.wa = "https://chat.whatsapp.com/BsOTVpmxCnbE62AL5XfYN1"
         result.kadept = "Grup WhatsApp BL"
@@ -77,6 +94,7 @@ app.post("/search", (req, res) => {
     if(result.jabatan === ""){
         result.jabatan = "Staff"
     }
+
     console.log(result)
     res.redirect("/#anouncement")
 })

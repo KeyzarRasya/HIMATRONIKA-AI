@@ -46,6 +46,9 @@
             <button class="w-2/6 h-10 rounded-lg bg-orange-500 text-white mt-5 hover:text-orange-500 hover:bg-white hover:border-orange-500 hover:border-2">Cari</button>
             <% if (result === "") { %>
              <p></p>
+             <% } else if (result.rejected === true) { %>
+              <p class="mt-5">Maaf anda dinyatakan <span class="text-orange-400 font-bold">Tidak Lolos</span></p>
+              <p>Tetap semangat, kesempatan dapat datang kapan saja.</p>
             <% } else { %>
             <p class="mt-5 text-center">Selamat Kepada Saudara/i</p> <p class="font-bold"><%= result.nama  %></p><p> telah diterima sebagai</p> <P class="font-bold"><%= result.jabatan%> <%= result.keterangan  %></p><p class="text-orange-500 font-bold">HIMATRONIKA-AI 2024</p>
                 <a href=<%= result.wa  %>>Hubungi : <span class="text-orange-400 font-bold underline"><%= result.kadept  %></span></a>
