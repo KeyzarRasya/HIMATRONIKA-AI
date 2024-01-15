@@ -2,13 +2,14 @@ const express = require("express")
 const be = require("./be")
 const bl = require("./bl")
 const path = require("path")
+const serveStatic = require("serve-static")
 
 const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(express.static("views"))
-app.use(express.static("public"))
+app.use('/static', serveStatic(path.join(__dirname, '.vercel/output/static')));
 
 app.set("view engine", "ejs")
 app.set('views', path.join(__dirname, 'views'));
