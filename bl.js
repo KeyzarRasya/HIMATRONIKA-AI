@@ -44,42 +44,42 @@ const bl =[
       {
         nama: 'Kent Ridho Ibrahim',
         jabatan: 'Ketua',
-        keterangan: 'BAKEL'
+        keterangan: 'Badan Kelengkapan (BALEG & BURT)'
       },
       {
         nama: 'Andhika Wahyu Adhyaksa',
         jabatan: '',
-        keterangan: 'BAKEL'
+        keterangan: 'Badan Kelengkapan (BALEG & BURT)'
       },
       {
         nama: 'Ardhan Anggana Prasetya',
         jabatan: '',
-        keterangan: 'BAKEL'
+        keterangan: 'Badan Kelengkapan (BALEG & BURT)'
       },
       {
         nama: 'Labib Musyari Aziz',
         jabatan: '',
-        keterangan: 'BAKEL'
+        keterangan: 'Badan Kelengkapan (BALEG & BURT)'
       },
       {
         nama: 'Danindra Akhmad Anantyo',
         jabatan: '',
-        keterangan: 'BAKEL'
+        keterangan: 'Badan Kelengkapan (BALEG & BURT)'
       },
       {
         nama: 'Sabrina Yulfrida Fajrin',
         jabatan: '',
-        keterangan: 'BAKEL'
+        keterangan: 'Badan Kelengkapan (BALEG & BURT)'
       },
       {
         nama: 'Ardita Aura Syawaliani',
         jabatan: '',
-        keterangan: 'BAKEL'
+        keterangan: 'Badan Kelengkapan (BALEG & BURT)'
       },
       {
         nama: 'Reyhan Praditya Bagaskara',
         jabatan: '',
-        keterangan: 'BAKEL'
+        keterangan: 'Badan Kelengkapan (BALEG & BURT)'
       },
 
       {
